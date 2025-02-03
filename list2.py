@@ -1,6 +1,6 @@
 # list tutorials - 29/01/2025
 
-futureCars = ['tesla', 'BMW', 'audi', 'mercedes', 'ford', 'toyota', 'audi']
+futureCars = ['tesla', 'BMW', 'audi', 'mercedes', 'audi' 'ford', 'toyota', 'audi']
 futureCars[4] = "chevrolet"
 print(futureCars[:4])
 futureCars.pop(4)
