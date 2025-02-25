@@ -54,7 +54,7 @@ def view_transactions():
     else:
         print("Your transactions:")
         for transaction in transaction_history:
-            print(f" {transaction}")
+            print(f"{transaction}")
 
 def menu():
     print("\n=== Menu ===\n1. Check balance\n2. Deposit funds\n3. Withdraw funds\n4. View transaction history\n5. Exit")
