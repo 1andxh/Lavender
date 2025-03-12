@@ -30,7 +30,7 @@ borrower_name TEXT NOT NULL,
 -- book_title VARCHAR(100) NOT NULL,
 date_borrowed DATE DEFAULT CURRENT_DATE,
 return_date DATE,
-CONSTRAINT fk_book FOREIGN KEY(book_id) REFERENCES books(id)
+FOREIGN KEY(book_id) REFERENCES books(id)
 );
 
 INSERT INTO borrower(book_id,borrower_name,return_date)
