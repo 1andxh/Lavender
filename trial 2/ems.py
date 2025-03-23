@@ -52,12 +52,12 @@ except Exception as e:
 
 try:
     def view_employee_info():
-        cur.execute("SELECT * FROM employee")
+        cur.execute("SELECT * FROM employees")
         employee_list = cur.fetchall()
         print("List of all employees\n")
         for employee in employee_list:
             print(f"ID: {employee[0]}, Name: {employee[1]}, Age: {employee[2]}, Department: {employee[3]}")
-        view_employee_info()
+    view_employee_info()
 except Exception as e:
     print("Failed to retrieve employee list")
     print(f"Error: {e}")
@@ -72,12 +72,16 @@ def update_employee_records():
 def main():
     print("=== Employee Management System ===\n")
     print("Menu\n1. Add Employee\n2. View Employees\3. Update Employee \4. Delete Employee\5. Exit")
-
+try:
     user_input = input("Enter option(1-5): ")
     if user_input == "1":
         add_employee()
     elif user_input == "2":
         view_employee_info()
+    else:
+        print("Wrong input! Enter options 1-5")
+except ValueError:
+    print("Numbers only!")
 
 
 
